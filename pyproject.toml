@@ -1,0 +1,23 @@
+[project]
+name = "crypto-whitepapers-mcp"
+version = "0.1.0"
+description = "An MCP server serving as a structured knowledge base of crypto whitepapers for AI agents to access, analyze, and learn from."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "agno>=1.3.4",
+    "duckduckgo-search>=8.0.1",
+    "fastembed>=0.6.1",
+    "lancedb>=0.21.2",
+    "mcp[cli]>=1.6.0",
+    "numpy>=2.2.4",
+    "pandas>=2.2.3",
+    "pypdf>=5.4.0",
+]
+
+[project.scripts]
+crypto-whitepapers-mcp = "crypto_whitepapers_mcp.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
